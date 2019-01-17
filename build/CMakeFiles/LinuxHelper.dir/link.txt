@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLinuxHelper.a  CMakeFiles/LinuxHelper.dir/common/dji_linux_environment.cpp.o CMakeFiles/LinuxHelper.dir/common/dji_linux_helpers.cpp.o
+/usr/bin/ranlib libLinuxHelper.a

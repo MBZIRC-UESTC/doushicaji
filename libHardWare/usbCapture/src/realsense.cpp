@@ -40,7 +40,7 @@ int RealsenseInterface::init(){
 
     //Add desired streams to configuration
     cfg.enable_stream(RS2_STREAM_INFRARED,  color_img_width, color_img_height, RS2_FORMAT_Y8, 60);
-    cfg.enable_stream(RS2_STREAM_DEPTH,     color_img_width, color_img_width, RS2_FORMAT_Z16, 60);
+    cfg.enable_stream(RS2_STREAM_DEPTH,     color_img_width, color_img_height, RS2_FORMAT_Z16, 60);
 
     //Instruct pipeline to start streaming with the requested configuration
     pipe.start(cfg);
@@ -55,7 +55,7 @@ int RealsenseInterface::init(){
         for(int i = 0; i < 5; i++)
     {
         //Wait for all configured streams to produce a frame
-        data = pipe.wait_for_frames();
+        auto data = pipe.wait_for_frames();
     }
 
     return 0;
@@ -85,6 +85,7 @@ int RealsenseInterface::readImg(){
         depth_tmp.copyTo(depth_img);
         pthread_mutex_unlock(&imgMutex);
         isColorImgUpdate = true;
+        isDepthImgUpdate = true;
         return EXIT_SUCCESS;
     }
     catch (const rs2::error & e)
