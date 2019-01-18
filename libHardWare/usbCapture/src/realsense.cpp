@@ -32,19 +32,24 @@ int RealsenseInterface::init(){
         cout << "Current device doesn't support advanced-mode!\n";
         return EXIT_FAILURE;
     }
-    rs2::device selected_device = dev;
-    auto depth_sensor = selected_device.first<rs2::depth_sensor>();
-    depth_sensor.set_option(rs2_option::RS2_OPTION_VISUAL_PRESET,rs2_rs400_visual_preset::RS2_RS400_VISUAL_PRESET_HIGH_ACCURACY);
+    // rs2::device selected_device = dev;
+    // auto depth_sensor = selected_device.first<rs2::depth_sensor>();
+    // depth_sensor.set_option(rs2_option::RS2_OPTION_VISUAL_PRESET,rs2_rs400_visual_preset::RS2_RS400_VISUAL_PRESET_HIGH_ACCURACY);
     //Create a configuration for configuring the pipeline with a non default profile
     rs2::config cfg;
 
     //Add desired streams to configuration
+    cfg.enable_stream(RS2_STREAM_COLOR,  color_img_width, color_img_height, RS2_FORMAT_BGR8, 60);
+    auto profile=pipe.start();
+    auto sensor = profile.get_device().first<rs2::depth_sensor>();
+    sensor.set_option(rs2_option::RS2_OPTION_VISUAL_PRESET,rs2_rs400_visual_preset::RS2_RS400_VISUAL_PRESET_HIGH_ACCURACY);
+
+    pipe.stop();
+    //Instruct pipeline to start streaming with the requested configuration
+    
     cfg.enable_stream(RS2_STREAM_INFRARED,  color_img_width, color_img_height, RS2_FORMAT_Y8, 60);
     cfg.enable_stream(RS2_STREAM_DEPTH,     color_img_width, color_img_height, RS2_FORMAT_Z16, 60);
-
-    //Instruct pipeline to start streaming with the requested configuration
     pipe.start(cfg);
-    
     spat.set_option(RS2_OPTION_HOLES_FILL, 5);
     
     
