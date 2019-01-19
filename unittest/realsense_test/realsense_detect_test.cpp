@@ -18,6 +18,7 @@ int main(){
             cout<<"distance z "<<distance.z<<endl;
             cout<<"distance x "<<distance.x<<endl;
             cout<<"distance y "<<distance.y<<endl;
+            circle(color,Point(distance.x,distance.y),5,Scalar(0,0,255),5,16);
             imshow("depth", src);
             imshow("color",color);
             waitKey(5);

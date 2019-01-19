@@ -23,14 +23,19 @@ Point3f Aim_ball::getDistance(Mat depth){
                 continue;
             }
             if(depth.at<ushort>(i,j) < depth.at<ushort>(a,b)){
-                a = i;
-                b = j;
+                for(int i = a-3; i <=a+3; i++){
+                    for(int j = b-3; j <= b+3; j++){
+
+
+
+                // a = i;
+                // b = j; 
             }
         }
     }
     distance.z = float(depth.at<ushort>(a,b));
-    distance.x = b - depth.cols/2;
-    distance.y = a - depth.rows/2;
+    distance.x = b;// - depth.cols/2;
+    distance.y = a;// - depth.rows/2;
     return distance;
 }
 

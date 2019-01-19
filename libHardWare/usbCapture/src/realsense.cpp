@@ -32,30 +32,52 @@ int RealsenseInterface::init(){
         cout << "Current device doesn't support advanced-mode!\n";
         return EXIT_FAILURE;
     }
-    rs2::device selected_device = dev;
-    auto depth_sensor = selected_device.first<rs2::depth_sensor>();
-    depth_sensor.set_option(rs2_option::RS2_OPTION_VISUAL_PRESET,rs2_rs400_visual_preset::RS2_RS400_VISUAL_PRESET_HIGH_ACCURACY);
+    // rs2::device selected_device = dev;
+    // auto depth_sensor = selected_device.first<rs2::depth_sensor>();
+    // depth_sensor.set_option(rs2_option::RS2_OPTION_VISUAL_PRESET,rs2_rs400_visual_preset::RS2_RS400_VISUAL_PRESET_HIGH_ACCURACY);
     //Create a configuration for configuring the pipeline with a non default profile
     rs2::config cfg;
-
-    //Add desired streams to configuration
     cfg.enable_stream(RS2_STREAM_INFRARED,  color_img_width, color_img_height, RS2_FORMAT_Y8, 60);
-    cfg.enable_stream(RS2_STREAM_DEPTH,     color_img_width, color_img_width, RS2_FORMAT_Z16, 60);
+    cfg.enable_stream(RS2_STREAM_DEPTH,     color_img_width, color_img_height, RS2_FORMAT_Z16, 60);
 
     //Instruct pipeline to start streaming with the requested configuration
-    pipe.start(cfg);
+    auto profile = pipe.start(cfg);
+    auto sensor = profile.get_device().first<rs2::depth_sensor>();
+    sensor.set_option(rs2_option::RS2_OPTION_VISUAL_PRESET,rs2_rs400_visual_preset::RS2_RS400_VISUAL_PRESET_HIGH_ACCURACY);
+
+
+    //Add desired streams to configuration
     
-    spat.set_option(RS2_OPTION_HOLES_FILL, 5);
+    
+    //cfg.enable_stream(RS2_STREAM_INFRARED,  color_img_width, color_img_height, RS2_FORMAT_Y8, 60);
+    //cfg.enable_stream(RS2_STREAM_DEPTH,     color_img_width, color_img_height, RS2_FORMAT_Z16, 60);
     
     
-    // If the demo is too slow, make sure you run in Release (-DCMAKE_BUILD_TYPE=Release)
-    // but you can also increase the following parameter to decimate depth more (reducing quality)
-    dec.set_option(RS2_OPTION_FILTER_MAGNITUDE, 2);
-    // Define transformations from and to Disparity domain
+    // cfg.enable_stream(RS2_STREAM_COLOR, color_img_width, color_img_height, RS2_FORMAT_BGR8, 60);
+
+    // //  cfg_color.enable_stream(RS2_STREAM_COLOR, color_img_width, color_img_height, RS2_FORMAT_BGR8, 60);
+    // //Instruct pipeline to start streaming with the requested configuration
+    // auto profile=pipe.start(cfg);
+    // auto sensor=profile.get_device().first<rs2::depth_sensor>();
+    // sensor.set_option(rs2_option::RS2_OPTION_VISUAL_PRESET,rs2_rs400_visual_preset::RS2_RS400_VISUAL_PRESET_HIGH_ACCURACY);
+    // pipe.stop();
+
+    // cfg.enable_stream(RS2_STREAM_INFRARED,  color_img_width, color_img_height, RS2_FORMAT_Y8, 60);
+    // cfg.enable_stream(RS2_STREAM_DEPTH,     color_img_width, color_img_height, RS2_FORMAT_Z16, 60);
+    // pipe.start(cfg);
+
+    
+    // spat.set_option(RS2_OPTION_HOLES_FILL, 5);
+    
+    
+    // // If the demo is too slow, make sure you run in Release (-DCMAKE_BUILD_TYPE=Release)
+    // // but you can also increase the following parameter to decimate depth more (reducing quality)
+    // dec.set_option(RS2_OPTION_FILTER_MAGNITUDE, 2);
+    // // Define transformations from and to Disparity domain
         for(int i = 0; i < 5; i++)
     {
         //Wait for all configured streams to produce a frame
-        data = pipe.wait_for_frames();
+        auto data = pipe.wait_for_frames();
     }
 
     return 0;
@@ -85,6 +107,7 @@ int RealsenseInterface::readImg(){
         depth_tmp.copyTo(depth_img);
         pthread_mutex_unlock(&imgMutex);
         isColorImgUpdate = true;
+        isDepthImgUpdate = true;
         return EXIT_SUCCESS;
     }
     catch (const rs2::error & e)

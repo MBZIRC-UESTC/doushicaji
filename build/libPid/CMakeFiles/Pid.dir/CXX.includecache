@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../libPid/include/pid.h
+stdint.h
+-
+stdbool.h
+-
+
+/home/allen/doushicaji/libPid/src/pid.cpp
+pid.h
+/home/allen/doushicaji/libPid/src/pid.h
+

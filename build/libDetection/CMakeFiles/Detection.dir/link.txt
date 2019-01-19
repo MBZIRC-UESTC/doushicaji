@@ -1,0 +1,2 @@
+/usr/bin/ar qc libDetection.a  CMakeFiles/Detection.dir/src/aim.cpp.o CMakeFiles/Detection.dir/src/pnp_solver.cpp.o
+/usr/bin/ranlib libDetection.a

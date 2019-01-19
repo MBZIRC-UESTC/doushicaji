@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../libDetection/include/aim.h
+opencv2/opencv.hpp
+../libDetection/include/opencv2/opencv.hpp
+iostream
+-
+pnp_solver.h
+../libDetection/include/pnp_solver.h
+
+../libDetection/include/pnp_solver.h
+opencv2/opencv.hpp
+-
+math.h
+-
+iostream
+-
+fstream
+-
+
+/home/allen/doushicaji/libDetection/src/aim.cpp
+aim.h
+/home/allen/doushicaji/libDetection/src/aim.h
+
+/home/allen/doushicaji/libDetection/src/pnp_solver.cpp
+pnp_solver.h
+/home/allen/doushicaji/libDetection/src/pnp_solver.h
+
