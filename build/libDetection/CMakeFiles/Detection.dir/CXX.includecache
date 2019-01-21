@@ -11,6 +11,8 @@ opencv2/opencv.hpp
 ../libDetection/include/opencv2/opencv.hpp
 iostream
 -
+vector
+-
 pnp_solver.h
 ../libDetection/include/pnp_solver.h
 

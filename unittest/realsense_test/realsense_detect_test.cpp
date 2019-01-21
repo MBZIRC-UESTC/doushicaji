@@ -9,17 +9,17 @@ int main(){
         cout << "RealsenseCapture init successed!" <<endl;
         usleep(1000000);
     }
-    Mat src;
+    Mat depth;
     Mat color;
     while(true){
-        if(realsense.getDepthImg(src) == 0){
+        if(realsense.getDepthImg(depth) == 0){
             realsense.getColorImg(color);
-            cv::Point3f distance = ball_aim.getDistance(src);
+            cv::Point3f distance = ball_aim.getDistance(depth);
             cout<<"distance z "<<distance.z<<endl;
             cout<<"distance x "<<distance.x<<endl;
             cout<<"distance y "<<distance.y<<endl;
             circle(color,Point(distance.x,distance.y),5,Scalar(0,0,255),5,16);
-            imshow("depth", src);
+            imshow("depth", depth);
             imshow("color",color);
             waitKey(5);
         }
