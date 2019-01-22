@@ -93,6 +93,7 @@ unittest/realsense_test/realsense_test: unittest/realsense_test/CMakeFiles/reals
 unittest/realsense_test/realsense_test: libBase/libBase.a
 unittest/realsense_test/realsense_test: libHardWare/usbCapture/libUsbCapture.a
 unittest/realsense_test/realsense_test: libDetection/libDetection.a
+unittest/realsense_test/realsense_test: libPid/libPid.a
 unittest/realsense_test/realsense_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stitching3.so.3.3.1
 unittest/realsense_test/realsense_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_superres3.so.3.3.1
 unittest/realsense_test/realsense_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videostab3.so.3.3.1

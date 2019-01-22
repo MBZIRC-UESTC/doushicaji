@@ -27,12 +27,12 @@ RobotModel::~RobotModel() {
 int RobotModel::init(Vehicle* vehicle){
     mRvehicle = vehicle;
     string serialPath,videoPath;
-    //配置文件
-    cv::FileStorage f("../res/main_config.yaml", cv::FileStorage::READ);
-    f["robot_id"] >> mRobotId;//机器人id
-    f["serial_path"] >> serialPath;//机器人串口路径
-    f["capture_path"] >> videoPath;//机器人摄像头路径
-    f.release();
+    //配置文件 error when build in TX2
+    //cv::FileStorage f("../res/main_config.yaml", cv::FileStorage::READ);
+    //f["robot_id"] >> mRobotId;//机器人id
+    //f["serial_path"] >> serialPath;//机器人串口路径
+    //f["capture_path"] >> videoPath;//机器人摄像头路径
+    //f.release();
     //初始化串口
     
     if(mSerialInterface.init(mRvehicle)==0) {

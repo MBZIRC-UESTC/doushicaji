@@ -84,13 +84,16 @@ void ControlModel::trackBall(){
         pid_x.PIDInputSet(distance.x);
         pid_y.PIDInputSet(distance.y);
         pid_z.PIDInputSet(distance.z);
+        if(pid_x.PIDCompute()==false)std::cout<<"error pid_x"<<std::endl;//fix
+        if(pid_y.PIDCompute()==false)std::cout<<"error pid_y"<<std::endl;
+        if(pid_z.PIDCompute()==false)std::cout<<"error pid_z"<<std::endl;
         float velocity_x = pid_x.PIDOutputGet();
         float velocity_y = pid_y.PIDOutputGet();
-        float velocity_z = pid_z.PIDOutputGet();
-        if(abs(distance.x)<50&&abs(distance.y)<50)
-            interface->movebyVelocity(velocity_x,velocity_y,velocity_z,0);
-        else interface->movebyVelocity(velocity_x,velocity_y,0,0);
-        if(distance.z<800)  cout<<"收网!!!!"<<endl;
+        //float velocity_z = pid_z.PIDOutputGet();
+        // if(abs(distance.x)<50&&abs(distance.y)<50)
+             interface->movebyVelocity(velocity_x,velocity_y,0,0);
+        // else interface->movebyVelocity(velocity_x,velocity_y,0,0);
+        // if(distance.z<800)  cout<<"收网!!!!"<<endl;
     }
 
 

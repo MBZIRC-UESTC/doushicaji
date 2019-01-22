@@ -42,13 +42,21 @@ librealsense2/rs.hpp
 base_thread.h
 ../libHardWare/usbCapture/include/base_thread.h
 
+../libPid/include/pid.h
+stdint.h
+-
+stdbool.h
+-
+
 /home/allen/doushicaji/unittest/realsense_test/realsense_detect_test.cpp
 opencv2/opencv.hpp
 /home/allen/doushicaji/unittest/realsense_test/opencv2/opencv.hpp
-aim.h
-/home/allen/doushicaji/unittest/realsense_test/aim.h
 realsense.h
 /home/allen/doushicaji/unittest/realsense_test/realsense.h
+pid.h
+/home/allen/doushicaji/unittest/realsense_test/pid.h
+aim.h
+/home/allen/doushicaji/unittest/realsense_test/aim.h
 
 /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
 opencv2/core/core_c.h

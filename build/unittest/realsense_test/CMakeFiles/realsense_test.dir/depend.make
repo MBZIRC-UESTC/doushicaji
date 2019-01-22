@@ -5,6 +5,7 @@ unittest/realsense_test/CMakeFiles/realsense_test.dir/realsense_detect_test.cpp.
 unittest/realsense_test/CMakeFiles/realsense_test.dir/realsense_detect_test.cpp.o: ../libDetection/include/aim.h
 unittest/realsense_test/CMakeFiles/realsense_test.dir/realsense_detect_test.cpp.o: ../libDetection/include/pnp_solver.h
 unittest/realsense_test/CMakeFiles/realsense_test.dir/realsense_detect_test.cpp.o: ../libHardWare/usbCapture/include/realsense.h
+unittest/realsense_test/CMakeFiles/realsense_test.dir/realsense_detect_test.cpp.o: ../libPid/include/pid.h
 unittest/realsense_test/CMakeFiles/realsense_test.dir/realsense_detect_test.cpp.o: ../unittest/realsense_test/realsense_detect_test.cpp
 unittest/realsense_test/CMakeFiles/realsense_test.dir/realsense_detect_test.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
 unittest/realsense_test/CMakeFiles/realsense_test.dir/realsense_detect_test.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp

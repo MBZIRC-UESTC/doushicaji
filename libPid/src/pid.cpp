@@ -1,5 +1,5 @@
 #include "pid.h"
-
+#include "stdio.h"
 //*********************************************************************************
 // Macros and Globals
 //*********************************************************************************
@@ -17,8 +17,8 @@ PIDControl::PIDControl ()
 void PIDControl::init(float kp, float ki, float kd, float sampleTimeSeconds, float minOutput, 
             float maxOutput, PIDMode mode, PIDDirection controllerDirection)
 {
-    controllerDirection = controllerDirection;
-    mode = mode;
+    this->controllerDirection = controllerDirection;
+    this->mode = mode;
     iTerm = 0.0f;
     input = 0.0f;
     lastInput = 0.0f;
@@ -42,12 +42,11 @@ void PIDControl::init(float kp, float ki, float kd, float sampleTimeSeconds, flo
 bool PIDControl::PIDCompute() 
 {
     float error, dInput;
-
+ 
     if(mode == MANUAL)
     {
         return false;
     }
-    
     // The classic PID error term
     error = setpoint - input;
     
@@ -59,13 +58,13 @@ bool PIDControl::PIDCompute()
     
     // Take the "derivative on measurement" instead of "derivative on error"
     dInput = input - lastInput;
-    
+    // printf("alterdKp %f error %f iTerm %f dInput %f\n",alteredKp,error,iTerm,dInput);
     // Run all the terms together to get the overall output
     output = alteredKp * error + iTerm - alteredKd * dInput;
-    
     // Bound the output
+    // printf("out %f min %f max %f\n",output,outMin,outMax);
     output = CONSTRAIN(output, outMin, outMax);
-    
+
     // Make the current input the former input
     lastInput = input;
     

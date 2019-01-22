@@ -24,6 +24,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../common"
   "../unittest/realsense_test/include"
   "../unittest/realsense_test/libBase/include"
+  "../unittest/realsense_test/libPid/include"
   "../unittest/realsense_test/libHardWare/usbCapture/include"
   "../unittest/realsense_test/libDetection/include"
   "/opt/ros/kinetic/include/opencv-3.3.1-dev"
@@ -35,6 +36,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/allen/doushicaji/build/libBase/CMakeFiles/Base.dir/DependInfo.cmake"
   "/home/allen/doushicaji/build/libHardWare/usbCapture/CMakeFiles/UsbCapture.dir/DependInfo.cmake"
   "/home/allen/doushicaji/build/libDetection/CMakeFiles/Detection.dir/DependInfo.cmake"
+  "/home/allen/doushicaji/build/libPid/CMakeFiles/Pid.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
