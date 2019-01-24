@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/UsbCapture.dir/src/realsense.cpp.o"
-  "CMakeFiles/UsbCapture.dir/src/usb_capture.cpp.o"
   "CMakeFiles/UsbCapture.dir/src/usb_capture_with_opencv.cpp.o"
   "CMakeFiles/UsbCapture.dir/src/usb_capture_with_thread.cpp.o"
+  "CMakeFiles/UsbCapture.dir/src/usb_capture.cpp.o"
+  "CMakeFiles/UsbCapture.dir/src/realsense.cpp.o"
   "libUsbCapture.pdb"
   "libUsbCapture.a"
 )

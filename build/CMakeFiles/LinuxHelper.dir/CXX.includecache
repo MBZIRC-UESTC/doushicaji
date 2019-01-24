@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -356,11 +356,11 @@ stdlib.h
 
 ../osdk-core/utility/inc/dji_singleton.hpp
 
-/home/allen/doushicaji/common/dji_linux_environment.cpp
+/home/nvidia/doushicaji/common/dji_linux_environment.cpp
 dji_linux_environment.hpp
-/home/allen/doushicaji/common/dji_linux_environment.hpp
+/home/nvidia/doushicaji/common/dji_linux_environment.hpp
 
-/home/allen/doushicaji/common/dji_linux_environment.hpp
+/home/nvidia/doushicaji/common/dji_linux_environment.hpp
 fstream
 -
 iostream
@@ -372,7 +372,7 @@ stdexcept
 unistd.h
 -
 
-/home/allen/doushicaji/common/dji_linux_helpers.cpp
+/home/nvidia/doushicaji/common/dji_linux_helpers.cpp
 dji_linux_helpers.hpp
 -
 

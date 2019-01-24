@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -382,17 +382,17 @@ stdlib.h
 
 ../osdk-core/utility/inc/dji_singleton.hpp
 
-/home/allen/doushicaji/unittest/serial_test/serial_test.cpp
+/home/nvidia/doushicaji/unittest/serial_test/serial_test.cpp
 serial_packet.h
-/home/allen/doushicaji/unittest/serial_test/serial_packet.h
+/home/nvidia/doushicaji/unittest/serial_test/serial_packet.h
 serial_interface.h
-/home/allen/doushicaji/unittest/serial_test/serial_interface.h
+/home/nvidia/doushicaji/unittest/serial_test/serial_interface.h
 iostream
 -
 dji_linux_helpers.hpp
 -
 dji_status.hpp
-/home/allen/doushicaji/unittest/serial_test/dji_status.hpp
+/home/nvidia/doushicaji/unittest/serial_test/dji_status.hpp
 dji_vehicle.hpp
 -
 

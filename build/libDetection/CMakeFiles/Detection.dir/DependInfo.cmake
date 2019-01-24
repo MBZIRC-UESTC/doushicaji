@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/allen/doushicaji/libDetection/src/aim.cpp" "/home/allen/doushicaji/build/libDetection/CMakeFiles/Detection.dir/src/aim.cpp.o"
-  "/home/allen/doushicaji/libDetection/src/pnp_solver.cpp" "/home/allen/doushicaji/build/libDetection/CMakeFiles/Detection.dir/src/pnp_solver.cpp.o"
+  "/home/nvidia/doushicaji/libDetection/src/aim.cpp" "/home/nvidia/doushicaji/build/libDetection/CMakeFiles/Detection.dir/src/aim.cpp.o"
+  "/home/nvidia/doushicaji/libDetection/src/pnp_solver.cpp" "/home/nvidia/doushicaji/build/libDetection/CMakeFiles/Detection.dir/src/pnp_solver.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

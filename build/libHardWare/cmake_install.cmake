@@ -1,4 +1,4 @@
-# Install script for directory: /home/allen/doushicaji/libHardWare
+# Install script for directory: /home/nvidia/doushicaji/libHardWare
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/allen/doushicaji/build/libHardWare/serialPort/cmake_install.cmake")
-  include("/home/allen/doushicaji/build/libHardWare/usbCapture/cmake_install.cmake")
+  include("/home/nvidia/doushicaji/build/libHardWare/serialPort/cmake_install.cmake")
+  include("/home/nvidia/doushicaji/build/libHardWare/usbCapture/cmake_install.cmake")
 
 endif()
 

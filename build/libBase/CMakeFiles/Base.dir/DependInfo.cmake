@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/allen/doushicaji/libBase/src/base_thread.cpp" "/home/allen/doushicaji/build/libBase/CMakeFiles/Base.dir/src/base_thread.cpp.o"
-  "/home/allen/doushicaji/libBase/src/basic_tool.cpp" "/home/allen/doushicaji/build/libBase/CMakeFiles/Base.dir/src/basic_tool.cpp.o"
-  "/home/allen/doushicaji/libBase/src/image_tool.cpp" "/home/allen/doushicaji/build/libBase/CMakeFiles/Base.dir/src/image_tool.cpp.o"
+  "/home/nvidia/doushicaji/libBase/src/base_thread.cpp" "/home/nvidia/doushicaji/build/libBase/CMakeFiles/Base.dir/src/base_thread.cpp.o"
+  "/home/nvidia/doushicaji/libBase/src/basic_tool.cpp" "/home/nvidia/doushicaji/build/libBase/CMakeFiles/Base.dir/src/basic_tool.cpp.o"
+  "/home/nvidia/doushicaji/libBase/src/image_tool.cpp" "/home/nvidia/doushicaji/build/libBase/CMakeFiles/Base.dir/src/image_tool.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

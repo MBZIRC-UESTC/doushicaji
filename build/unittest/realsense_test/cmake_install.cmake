@@ -1,4 +1,4 @@
-# Install script for directory: /home/allen/doushicaji/unittest/realsense_test
+# Install script for directory: /home/nvidia/doushicaji/unittest/realsense_test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

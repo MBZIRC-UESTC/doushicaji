@@ -1,4 +1,4 @@
-# Install script for directory: /home/allen/doushicaji/libHardWare/serialPort
+# Install script for directory: /home/nvidia/doushicaji/libHardWare/serialPort
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

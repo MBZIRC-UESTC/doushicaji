@@ -1,4 +1,4 @@
-# Install script for directory: /home/allen/doushicaji/unittest
+# Install script for directory: /home/nvidia/doushicaji/unittest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/allen/doushicaji/build/unittest/realsense_test/cmake_install.cmake")
-  include("/home/allen/doushicaji/build/unittest/serial_test/cmake_install.cmake")
+  include("/home/nvidia/doushicaji/build/unittest/realsense_test/cmake_install.cmake")
+  include("/home/nvidia/doushicaji/build/unittest/serial_test/cmake_install.cmake")
 
 endif()
 

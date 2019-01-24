@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -26,11 +26,11 @@ iostream
 fstream
 -
 
-/home/allen/doushicaji/libDetection/src/aim.cpp
+/home/nvidia/doushicaji/libDetection/src/aim.cpp
 aim.h
-/home/allen/doushicaji/libDetection/src/aim.h
+/home/nvidia/doushicaji/libDetection/src/aim.h
 
-/home/allen/doushicaji/libDetection/src/pnp_solver.cpp
+/home/nvidia/doushicaji/libDetection/src/pnp_solver.cpp
 pnp_solver.h
-/home/allen/doushicaji/libDetection/src/pnp_solver.h
+/home/nvidia/doushicaji/libDetection/src/pnp_solver.h
 

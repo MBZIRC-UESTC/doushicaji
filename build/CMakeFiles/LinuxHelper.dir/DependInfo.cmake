@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/allen/doushicaji/common/dji_linux_environment.cpp" "/home/allen/doushicaji/build/CMakeFiles/LinuxHelper.dir/common/dji_linux_environment.cpp.o"
-  "/home/allen/doushicaji/common/dji_linux_helpers.cpp" "/home/allen/doushicaji/build/CMakeFiles/LinuxHelper.dir/common/dji_linux_helpers.cpp.o"
+  "/home/nvidia/doushicaji/common/dji_linux_environment.cpp" "/home/nvidia/doushicaji/build/CMakeFiles/LinuxHelper.dir/common/dji_linux_environment.cpp.o"
+  "/home/nvidia/doushicaji/common/dji_linux_helpers.cpp" "/home/nvidia/doushicaji/build/CMakeFiles/LinuxHelper.dir/common/dji_linux_helpers.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

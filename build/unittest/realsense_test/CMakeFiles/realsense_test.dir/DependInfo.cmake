@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/allen/doushicaji/unittest/realsense_test/realsense_detect_test.cpp" "/home/allen/doushicaji/build/unittest/realsense_test/CMakeFiles/realsense_test.dir/realsense_detect_test.cpp.o"
+  "/home/nvidia/doushicaji/unittest/realsense_test/realsense_detect_test.cpp" "/home/nvidia/doushicaji/build/unittest/realsense_test/CMakeFiles/realsense_test.dir/realsense_detect_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -27,16 +27,15 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../unittest/realsense_test/libPid/include"
   "../unittest/realsense_test/libHardWare/usbCapture/include"
   "../unittest/realsense_test/libDetection/include"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
+  "/usr/include/opencv"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/allen/doushicaji/build/libBase/CMakeFiles/Base.dir/DependInfo.cmake"
-  "/home/allen/doushicaji/build/libHardWare/usbCapture/CMakeFiles/UsbCapture.dir/DependInfo.cmake"
-  "/home/allen/doushicaji/build/libDetection/CMakeFiles/Detection.dir/DependInfo.cmake"
-  "/home/allen/doushicaji/build/libPid/CMakeFiles/Pid.dir/DependInfo.cmake"
+  "/home/nvidia/doushicaji/build/libBase/CMakeFiles/Base.dir/DependInfo.cmake"
+  "/home/nvidia/doushicaji/build/libHardWare/usbCapture/CMakeFiles/UsbCapture.dir/DependInfo.cmake"
+  "/home/nvidia/doushicaji/build/libDetection/CMakeFiles/Detection.dir/DependInfo.cmake"
+  "/home/nvidia/doushicaji/build/libPid/CMakeFiles/Pid.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

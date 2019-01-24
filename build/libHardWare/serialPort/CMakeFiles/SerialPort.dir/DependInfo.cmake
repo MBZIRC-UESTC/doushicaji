@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/allen/doushicaji/libHardWare/serialPort/src/serial_interface.cpp" "/home/allen/doushicaji/build/libHardWare/serialPort/CMakeFiles/SerialPort.dir/src/serial_interface.cpp.o"
-  "/home/allen/doushicaji/libHardWare/serialPort/src/serial_packet.cpp" "/home/allen/doushicaji/build/libHardWare/serialPort/CMakeFiles/SerialPort.dir/src/serial_packet.cpp.o"
+  "/home/nvidia/doushicaji/libHardWare/serialPort/src/serial_interface.cpp" "/home/nvidia/doushicaji/build/libHardWare/serialPort/CMakeFiles/SerialPort.dir/src/serial_interface.cpp.o"
+  "/home/nvidia/doushicaji/libHardWare/serialPort/src/serial_packet.cpp" "/home/nvidia/doushicaji/build/libHardWare/serialPort/CMakeFiles/SerialPort.dir/src/serial_packet.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -28,7 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/allen/doushicaji/build/osdk-core/CMakeFiles/djiosdk-core.dir/DependInfo.cmake"
+  "/home/nvidia/doushicaji/build/osdk-core/CMakeFiles/djiosdk-core.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

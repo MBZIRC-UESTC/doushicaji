@@ -1,4 +1,4 @@
-# Install script for directory: /home/allen/doushicaji/libBase
+# Install script for directory: /home/nvidia/doushicaji/libBase
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/LinuxHelper.dir/common/dji_linux_environment.cpp.o"
   "CMakeFiles/LinuxHelper.dir/common/dji_linux_helpers.cpp.o"
+  "CMakeFiles/LinuxHelper.dir/common/dji_linux_environment.cpp.o"
   "libLinuxHelper.pdb"
   "libLinuxHelper.a"
 )

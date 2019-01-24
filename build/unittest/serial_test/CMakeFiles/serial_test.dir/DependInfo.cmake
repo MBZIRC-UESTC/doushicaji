@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/allen/doushicaji/unittest/serial_test/serial_test.cpp" "/home/allen/doushicaji/build/unittest/serial_test/CMakeFiles/serial_test.dir/serial_test.cpp.o"
+  "/home/nvidia/doushicaji/unittest/serial_test/serial_test.cpp" "/home/nvidia/doushicaji/build/unittest/serial_test/CMakeFiles/serial_test.dir/serial_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -26,16 +26,15 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../unittest/serial_test/libBase/include"
   "../unittest/serial_test/libHardWare/serialPort/include"
   "../unittest/serial_test/common"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
+  "/usr/include/opencv"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/allen/doushicaji/build/libHardWare/serialPort/CMakeFiles/SerialPort.dir/DependInfo.cmake"
-  "/home/allen/doushicaji/build/libBase/CMakeFiles/Base.dir/DependInfo.cmake"
-  "/home/allen/doushicaji/build/osdk-core/CMakeFiles/djiosdk-core.dir/DependInfo.cmake"
-  "/home/allen/doushicaji/build/CMakeFiles/LinuxHelper.dir/DependInfo.cmake"
+  "/home/nvidia/doushicaji/build/libHardWare/serialPort/CMakeFiles/SerialPort.dir/DependInfo.cmake"
+  "/home/nvidia/doushicaji/build/libBase/CMakeFiles/Base.dir/DependInfo.cmake"
+  "/home/nvidia/doushicaji/build/osdk-core/CMakeFiles/djiosdk-core.dir/DependInfo.cmake"
+  "/home/nvidia/doushicaji/build/CMakeFiles/LinuxHelper.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

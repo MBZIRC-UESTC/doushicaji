@@ -39,9 +39,9 @@ void ControlModel::processFSM(){
         pRobotModel->setCurrentMode(mSetMode);
         switch (mSetMode){
             case ROBOT_MODE_TRACKBALL:{
-                pid_x.init(0.001,0,0,0.0f,3,0,AUTOMATIC,DIRECT);
-                pid_y.init(0.001,0,0,0.0f,3,0,AUTOMATIC,DIRECT);
-                pid_z.init(0.001,0,0,0.0f,3,0,AUTOMATIC,DIRECT);
+                pid_x.init(0.001,0,0,0.0f,-3,3,AUTOMATIC,DIRECT);
+                pid_y.init(0.001,0,0,0.0f,-3,3,AUTOMATIC,DIRECT);
+                pid_z.init(0.001,0,0,0.0f,-3,3,AUTOMATIC,DIRECT);
                 pid_x.PIDSetpointSet(0);
                 pid_y.PIDSetpointSet(0);
                 pid_z.PIDSetpointSet(500);
@@ -90,6 +90,7 @@ void ControlModel::trackBall(){
         float velocity_x = pid_x.PIDOutputGet();
         float velocity_y = pid_y.PIDOutputGet();
         //float velocity_z = pid_z.PIDOutputGet();
+	std::cout<<"pid_x:"<<velocity_x<<"\tpid_y:"<<velocity_y<<std::endl;
         // if(abs(distance.x)<50&&abs(distance.y)<50)
              interface->movebyVelocity(velocity_x,velocity_y,0,0);
         // else interface->movebyVelocity(velocity_x,velocity_y,0,0);

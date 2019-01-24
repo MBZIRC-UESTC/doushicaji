@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Detection.dir/src/aim.cpp.o"
   "CMakeFiles/Detection.dir/src/pnp_solver.cpp.o"
+  "CMakeFiles/Detection.dir/src/aim.cpp.o"
   "libDetection.pdb"
   "libDetection.a"
 )

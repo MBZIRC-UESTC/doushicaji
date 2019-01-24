@@ -1,4 +1,4 @@
-# Install script for directory: /home/allen/doushicaji/unittest/serial_test
+# Install script for directory: /home/nvidia/doushicaji/unittest/serial_test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

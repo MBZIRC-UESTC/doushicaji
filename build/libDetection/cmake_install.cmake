@@ -1,4 +1,4 @@
-# Install script for directory: /home/allen/doushicaji/libDetection
+# Install script for directory: /home/nvidia/doushicaji/libDetection
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

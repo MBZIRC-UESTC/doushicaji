@@ -1,4 +1,4 @@
-# Install script for directory: /home/allen/doushicaji
+# Install script for directory: /home/nvidia/doushicaji
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/allen/doushicaji/build/osdk-core/cmake_install.cmake")
-  include("/home/allen/doushicaji/build/libBase/cmake_install.cmake")
-  include("/home/allen/doushicaji/build/libHardWare/cmake_install.cmake")
-  include("/home/allen/doushicaji/build/libDetection/cmake_install.cmake")
-  include("/home/allen/doushicaji/build/libPid/cmake_install.cmake")
-  include("/home/allen/doushicaji/build/unittest/cmake_install.cmake")
+  include("/home/nvidia/doushicaji/build/osdk-core/cmake_install.cmake")
+  include("/home/nvidia/doushicaji/build/libBase/cmake_install.cmake")
+  include("/home/nvidia/doushicaji/build/libHardWare/cmake_install.cmake")
+  include("/home/nvidia/doushicaji/build/libDetection/cmake_install.cmake")
+  include("/home/nvidia/doushicaji/build/libPid/cmake_install.cmake")
+  include("/home/nvidia/doushicaji/build/unittest/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/allen/doushicaji/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nvidia/doushicaji/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

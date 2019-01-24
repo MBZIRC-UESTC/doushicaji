@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -342,187 +342,187 @@ stdlib.h
 
 ../osdk-core/utility/inc/dji_singleton.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_ack.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_ack.cpp
 dji_ack.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_ack.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_ack.hpp
 dji_log.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_log.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_log.hpp
 string.h
 -
 
-/home/allen/doushicaji/osdk-core/api/src/dji_broadcast.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_broadcast.cpp
 dji_broadcast.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_broadcast.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_broadcast.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_camera.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_camera.cpp
 dji_camera.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_camera.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_camera.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_command.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_command.cpp
 dji_command.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_command.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_command.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_control.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_control.cpp
 dji_control.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_control.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_control.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 iostream
 -
 
-/home/allen/doushicaji/osdk-core/api/src/dji_error.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_error.cpp
 dji_error.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_error.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_error.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_gimbal.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_gimbal.cpp
 dji_gimbal.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_gimbal.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_gimbal.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_hardware_sync.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_hardware_sync.cpp
 dji_hardware_sync.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_hardware_sync.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_hardware_sync.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_hotpoint.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_hotpoint.cpp
 dji_hotpoint.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_hotpoint.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_hotpoint.hpp
 dji_mission_manager.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_mission_manager.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_mission_manager.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_mfio.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_mfio.cpp
 dji_mfio.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_mfio.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_mfio.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_mission_manager.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_mission_manager.cpp
 dji_mission_manager.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_mission_manager.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_mission_manager.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_mobile_communication.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_mobile_communication.cpp
 dji_mobile_communication.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_mobile_communication.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_mobile_communication.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_subscription.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_subscription.cpp
 dji_subscription.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_subscription.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_subscription.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.cpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 new
 -
 iostream
 -
 
-/home/allen/doushicaji/osdk-core/api/src/dji_version.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_version.cpp
 dji_version.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_version.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_version.hpp
 dji_open_protocol.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_open_protocol.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_open_protocol.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_virtual_rc.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_virtual_rc.cpp
 dji_virtual_rc.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_virtual_rc.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_virtual_rc.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/api/src/dji_waypoint.cpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_waypoint.cpp
 dji_waypoint.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_waypoint.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_waypoint.hpp
 dji_mission_manager.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_mission_manager.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_mission_manager.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/api/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/api/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/hal/src/dji_hard_driver.cpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_hard_driver.cpp
 dji_hard_driver.hpp
-/home/allen/doushicaji/osdk-core/hal/src/dji_hard_driver.hpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_hard_driver.hpp
 
-/home/allen/doushicaji/osdk-core/hal/src/dji_log.cpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_log.cpp
 dji_log.hpp
-/home/allen/doushicaji/osdk-core/hal/src/dji_log.hpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_log.hpp
 dji_memory_default.hpp
-/home/allen/doushicaji/osdk-core/hal/src/dji_memory_default.hpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_memory_default.hpp
 stdarg.h
 -
 stdio.h
 -
 
-/home/allen/doushicaji/osdk-core/hal/src/dji_memory.cpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_memory.cpp
 dji_memory.hpp
-/home/allen/doushicaji/osdk-core/hal/src/dji_memory.hpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_memory.hpp
 string.h
 -
 
-/home/allen/doushicaji/osdk-core/hal/src/dji_platform_manager.cpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_platform_manager.cpp
 dji_platform_manager.hpp
-/home/allen/doushicaji/osdk-core/hal/src/dji_platform_manager.hpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_platform_manager.hpp
 
-/home/allen/doushicaji/osdk-core/hal/src/dji_thread_manager.cpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_thread_manager.cpp
 dji_thread_manager.hpp
-/home/allen/doushicaji/osdk-core/hal/src/dji_thread_manager.hpp
+/home/nvidia/doushicaji/osdk-core/hal/src/dji_thread_manager.hpp
 
-/home/allen/doushicaji/osdk-core/platform/default/src/dji_memory_default.cpp
+/home/nvidia/doushicaji/osdk-core/platform/default/src/dji_memory_default.cpp
 dji_memory_default.hpp
-/home/allen/doushicaji/osdk-core/platform/default/src/dji_memory_default.hpp
+/home/nvidia/doushicaji/osdk-core/platform/default/src/dji_memory_default.hpp
 dji_log.hpp
-/home/allen/doushicaji/osdk-core/platform/default/src/dji_log.hpp
+/home/nvidia/doushicaji/osdk-core/platform/default/src/dji_log.hpp
 pthread.h
 -
 
-/home/allen/doushicaji/osdk-core/platform/linux/src/linux_serial_device.cpp
+/home/nvidia/doushicaji/osdk-core/platform/linux/src/linux_serial_device.cpp
 linux_serial_device.hpp
-/home/allen/doushicaji/osdk-core/platform/linux/src/linux_serial_device.hpp
+/home/nvidia/doushicaji/osdk-core/platform/linux/src/linux_serial_device.hpp
 algorithm
 -
 iterator
 -
 
-/home/allen/doushicaji/osdk-core/platform/linux/src/posix_thread.cpp
+/home/nvidia/doushicaji/osdk-core/platform/linux/src/posix_thread.cpp
 posix_thread.hpp
-/home/allen/doushicaji/osdk-core/platform/linux/src/posix_thread.hpp
+/home/nvidia/doushicaji/osdk-core/platform/linux/src/posix_thread.hpp
 dji_vehicle.hpp
-/home/allen/doushicaji/osdk-core/platform/linux/src/dji_vehicle.hpp
+/home/nvidia/doushicaji/osdk-core/platform/linux/src/dji_vehicle.hpp
 
-/home/allen/doushicaji/osdk-core/platform/linux/src/posix_thread_manager.cpp
+/home/nvidia/doushicaji/osdk-core/platform/linux/src/posix_thread_manager.cpp
 posix_thread_manager.hpp
-/home/allen/doushicaji/osdk-core/platform/linux/src/posix_thread_manager.hpp
+/home/nvidia/doushicaji/osdk-core/platform/linux/src/posix_thread_manager.hpp
 
-/home/allen/doushicaji/osdk-core/protocol/src/dji_aes.cpp
+/home/nvidia/doushicaji/osdk-core/protocol/src/dji_aes.cpp
 dji_aes.hpp
-/home/allen/doushicaji/osdk-core/protocol/src/dji_aes.hpp
+/home/nvidia/doushicaji/osdk-core/protocol/src/dji_aes.hpp
 
-/home/allen/doushicaji/osdk-core/protocol/src/dji_open_protocol.cpp
+/home/nvidia/doushicaji/osdk-core/protocol/src/dji_open_protocol.cpp
 dji_open_protocol.hpp
-/home/allen/doushicaji/osdk-core/protocol/src/dji_open_protocol.hpp
+/home/nvidia/doushicaji/osdk-core/protocol/src/dji_open_protocol.hpp
 dji_vehicle.hpp
 -
 stdio.h
 -
 
-/home/allen/doushicaji/osdk-core/protocol/src/dji_protocol_base.cpp
+/home/nvidia/doushicaji/osdk-core/protocol/src/dji_protocol_base.cpp
 dji_protocol_base.hpp
-/home/allen/doushicaji/osdk-core/protocol/src/dji_protocol_base.hpp
+/home/nvidia/doushicaji/osdk-core/protocol/src/dji_protocol_base.hpp
 
-/home/allen/doushicaji/osdk-core/utility/src/dji_circular_buffer.cpp
+/home/nvidia/doushicaji/osdk-core/utility/src/dji_circular_buffer.cpp
 dji_circular_buffer.hpp
-/home/allen/doushicaji/osdk-core/utility/src/dji_circular_buffer.hpp
+/home/nvidia/doushicaji/osdk-core/utility/src/dji_circular_buffer.hpp
 
-/home/allen/doushicaji/osdk-core/utility/src/dji_singleton.cpp
+/home/nvidia/doushicaji/osdk-core/utility/src/dji_singleton.cpp
 dji_singleton.hpp
-/home/allen/doushicaji/osdk-core/utility/src/dji_singleton.hpp
+/home/nvidia/doushicaji/osdk-core/utility/src/dji_singleton.hpp
 

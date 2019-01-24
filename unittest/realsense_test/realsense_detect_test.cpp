@@ -41,11 +41,11 @@ int main(){
         cout<<velocity_x<<endl;
         cout<<velocity_y<<endl;
         //float velocity_z = pid_z.PIDOutputGet();
-        if(abs(distance.x)<50&&abs(distance.y)<50)
+//        if(abs(distance.x)<50&&abs(distance.y)<50)
             // interface->movebyVelocity(velocity_x,velocity_y,0,0);
-            imshow("depth", depth);
-            imshow("color",color);
-            waitKey(5);
+           // imshow("depth", depth);
+            //imshow("color",color);
+           // waitKey(5);
         }
         else cout<<"error"<<endl;
     }

@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -360,19 +360,19 @@ stdlib.h
 
 ../osdk-core/utility/inc/dji_singleton.hpp
 
-/home/allen/doushicaji/libBase/src/base_thread.cpp
+/home/nvidia/doushicaji/libBase/src/base_thread.cpp
 base_thread.h
-/home/allen/doushicaji/libBase/src/base_thread.h
+/home/nvidia/doushicaji/libBase/src/base_thread.h
 
-/home/allen/doushicaji/libBase/src/basic_tool.cpp
+/home/nvidia/doushicaji/libBase/src/basic_tool.cpp
 basic_tool.h
-/home/allen/doushicaji/libBase/src/basic_tool.h
+/home/nvidia/doushicaji/libBase/src/basic_tool.h
 iostream
-/home/allen/doushicaji/libBase/src/iostream
+/home/nvidia/doushicaji/libBase/src/iostream
 cmath
 -
 
-/home/allen/doushicaji/libBase/src/image_tool.cpp
+/home/nvidia/doushicaji/libBase/src/image_tool.cpp
 image_tool.h
-/home/allen/doushicaji/libBase/src/image_tool.h
+/home/nvidia/doushicaji/libBase/src/image_tool.h
 

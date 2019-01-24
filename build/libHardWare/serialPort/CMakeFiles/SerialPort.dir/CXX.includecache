@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -362,11 +362,11 @@ stdlib.h
 
 ../osdk-core/utility/inc/dji_singleton.hpp
 
-/home/allen/doushicaji/libHardWare/serialPort/src/serial_interface.cpp
+/home/nvidia/doushicaji/libHardWare/serialPort/src/serial_interface.cpp
 serial_interface.h
-/home/allen/doushicaji/libHardWare/serialPort/src/serial_interface.h
+/home/nvidia/doushicaji/libHardWare/serialPort/src/serial_interface.h
 
-/home/allen/doushicaji/libHardWare/serialPort/src/serial_packet.cpp
+/home/nvidia/doushicaji/libHardWare/serialPort/src/serial_packet.cpp
 serial_packet.h
-/home/allen/doushicaji/libHardWare/serialPort/src/serial_packet.h
+/home/nvidia/doushicaji/libHardWare/serialPort/src/serial_packet.h
 
