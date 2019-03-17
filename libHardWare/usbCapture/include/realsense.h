@@ -50,6 +50,7 @@ class RealsenseInterface:public BaseThread{
         rs2::disparity_transform depth2disparity;
         rs2::decimation_filter dec;
         rs2::pipeline pipe;
+        rs2::pipeline pipe_color;
         bool isOpen;
         bool isColorImgUpdate;
         bool isDepthImgUpdate;
