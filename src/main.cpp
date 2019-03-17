@@ -19,20 +19,21 @@
 using  namespace std;
 
 int main(int argc, char** argv){
-    RobotModel robotModel;
+    //RobotModel robotModel;
     LinuxSetup linuxEnvironment(argc,argv);
     Vehicle*   vehicle;
     vehicle = linuxEnvironment.getVehicle();
     cout<<"[robot init]robot model start to initialize!"<<endl;
+    RobotModel robotModel;
     robotModel.init(vehicle);
     cout<<"[robot init]robot control model start to initializ!"<<endl;
     usleep(10000);
     ControlModel controlModel;
     controlModel.init(&robotModel);
     cout<<"[robot init]robot serial port start to listen!"<<endl;
-    SerialListenThread serialListenThread;
-    serialListenThread.init(&robotModel,&controlModel);
-    serialListenThread.start();
+    // SerialListenThread serialListenThread;
+    // serialListenThread.init(&robotModel,&controlModel);
+    // serialListenThread.start();
     cout<<"[robot init]robot init end!"<<endl;
     //debug模块
     //SerialPortDebug serialPortDebug;
@@ -42,7 +43,7 @@ int main(int argc, char** argv){
     while(true){
         controlModel.processFSM();
     }
-    serialListenThread.join();
+    //serialListenThread.join();
     cout<<"error end!"<<endl;
     //getchar();//防止监听线程意外结束直接退出。
     return 0;
