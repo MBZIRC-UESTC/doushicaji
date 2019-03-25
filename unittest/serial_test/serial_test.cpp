@@ -19,8 +19,8 @@ int main(int argc, char** argv)
 
     cout<<"w:           1m/s x轴"<<endl;
     cout<<"s:           -1m/s x轴"<<endl;
-    cout<<"d:           1m/s  y轴"<<endl;
-    cout<<"a:           -1m/s y轴"<<endl;
+    cout<<"a:           1m/s  y轴"<<endl;
+    cout<<"d:           -1m/s y轴"<<endl;
     cout<<"q:           1m/s  z轴"<<endl;
     cout<<"z:           -1m/s z轴"<<endl;
     cout<<"x:           获取数据  "<<endl;
@@ -55,12 +55,12 @@ int main(int argc, char** argv)
                 serial.movebyVelocity(-1.0,0,0,0);
                 cout<<"please input..."<<endl;
                 break;
-            case 'd':
+            case 'a':
                 cout<<"movebyVelocity(0,1.0,0,0)"<<endl;
                 serial.movebyVelocity(0,1.0,0,0);
                 cout<<"please input..."<<endl;
                 break;
-            case 'a':
+            case 'd':
                 cout<<"movebyVelocity(0,-1.0,0,0)"<<endl;
                 serial.movebyVelocity(0,-1.0,0,0);
                 cout<<"please input..."<<endl;

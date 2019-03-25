@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -15,4 +15,6 @@ stdbool.h
 /home/vayneli/doushicaji/libPid/src/pid.cpp
 pid.h
 /home/vayneli/doushicaji/libPid/src/pid.h
+stdio.h
+/home/vayneli/doushicaji/libPid/src/stdio.h
 

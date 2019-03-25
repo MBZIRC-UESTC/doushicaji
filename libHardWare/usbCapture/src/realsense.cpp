@@ -46,7 +46,8 @@ int RealsenseInterface::init(){
     auto sensor = profile.get_device().first<rs2::depth_sensor>();
     sensor.set_option(rs2_option::RS2_OPTION_VISUAL_PRESET,rs2_rs400_visual_preset::RS2_RS400_VISUAL_PRESET_HIGH_ACCURACY);
     pipe.stop();
-    cfg.enable_stream(RS2_STREAM_INFRARED,  color_img_width, color_img_height, RS2_FORMAT_Y8, 60);              
+    cfg.enable_stream(RS2_STREAM_INFRARED,  color_img_width, color_img_height, RS2_FORMAT_Y8, 60);
+    cfg.enable_stream(RS2_STREAM_COLOR,  color_img_width, color_img_height, RS2_FORMAT_BGR8, 60);              
     cfg.enable_stream(RS2_STREAM_DEPTH,     color_img_width, color_img_height, RS2_FORMAT_Z16, 60);   
     pipe.start(cfg);
     //Add desired streams to configuration
@@ -99,13 +100,19 @@ int RealsenseInterface::init(int width, int height){
 int RealsenseInterface::readImg(){
     try{
         data = pipe.wait_for_frames();
-        rs2::frame color = data.first(RS2_STREAM_INFRARED);
+        rs2::frame color_infrared = data.first(RS2_STREAM_INFRARED);
+        rs2::frame color = data.get_color_frame();
         rs2::frame depth = data.get_depth_frame();
+        const int w_c = color.as<rs2::video_frame>().get_width();
+        const int h_c = color.as<rs2::video_frame>().get_height();
         const int w = depth.as<rs2::video_frame>().get_width();
         const int h = depth.as<rs2::video_frame>().get_height();
-        Mat color_tmp(Size(color_img_width, color_img_height),CV_8UC1,(void*)color.get_data(),Mat::AUTO_STEP);
+        
+        Mat color_tmp(Size(w_c, h_c),CV_8UC3,(void*)color.get_data(),Mat::AUTO_STEP);
+        //Mat color_tmp(Size(color_img_width, color_img_height),CV_8UC3,(void*)color.get_data(),Mat::AUTO_STEP);
         Mat depth_tmp(Size(w, h),CV_16UC1,(void*)depth.get_data(),Mat::AUTO_STEP);
         pthread_mutex_lock(&imgMutex);
+        resize(color_tmp,color_tmp,Size(640,480));
         color_tmp.copyTo(color_img);//写入color_img,加锁
         depth_tmp.copyTo(depth_img);
         pthread_mutex_unlock(&imgMutex);

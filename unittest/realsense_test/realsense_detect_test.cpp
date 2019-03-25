@@ -12,8 +12,10 @@ int main(){
     }
     Mat depth;
     Mat color;
-    static VideoWriter writer;
-    writer.open("log.avi",CV_FOURCC('X','V','I','D'),25,Size(640,480),0);
+    static VideoWriter writer_color,writer_depth;
+    writer_color.open("log_color.avi",CV_FOURCC('M','J','P','G'),25,Size(640,480),1);
+    writer_depth.open("log_depth.avi",CV_FOURCC('M','P','4','2'),25,Size(640,480),0);
+    //writer.open("log.avi",CV_FOURCC('M','J','P','G'),25,Size(640,480),0);
     PIDControl pid_x;
     PIDControl pid_y;
     PIDControl pid_z;
@@ -37,18 +39,18 @@ int main(){
             //cout<<depth.rows/2<<endl;
             //if(cap->getDepthImg(src) == 0){
         distance = ball_aim.getDistance(depth);
-        std::cout<<"distance.x:"<<distance.y<<"\tdistance.z:"<<distance.z<<endl;
+        std::cout<<"distance.x:"<<distance.x<<"\tdistance.z:"<<distance.z<<endl;
         if(ball_aim.isdetect(color,distance)==1){ 
         //std::cout<<"distance.x:"<<distance.y<<endl;
         circle(color,Point(distance.x+320,distance.y+240),5,Scalar(0,0,255));
-        pid_x.PIDInputSet(distance.x);
-        pid_y.PIDInputSet(distance.y);
+        pid_y.PIDInputSet(distance.x);
+        pid_x.PIDInputSet(distance.y);
         pid_z.PIDInputSet(distance.z);
         if(pid_x.PIDCompute()==false)std::cout<<"error pid_x"<<std::endl;//fix
         if(pid_y.PIDCompute()==false)std::cout<<"error pid_y"<<std::endl;
         if(pid_z.PIDCompute()==false)std::cout<<"error pid_z"<<std::endl;
-        velocity_y = pid_x.PIDOutputGet();
-        velocity_x = pid_y.PIDOutputGet();
+        velocity_x = pid_x.PIDOutputGet();
+        velocity_y = pid_y.PIDOutputGet();
         //velocity_z = pid_z.PIDOutputGet();
         }else{
             velocity_x=velocity_y=velocity_z=0;
@@ -61,9 +63,13 @@ int main(){
         putText(color,str_2,Point(10,60),CV_FONT_HERSHEY_SIMPLEX,1,Scalar(0,0,255),4,8);
 
         namedWindow("color",CV_WINDOW_AUTOSIZE);
+        //namedWindow("depth",CV_WINDOW_AUTOSIZE);
         imshow("color",color);
+        //imshow("depth",depth);
         waitKey(50);
-        writer.write(color);
+        writer_color.write(color);
+        depth.convertTo(depth,CV_8UC1);
+        writer_depth.write(depth);
         //     circle(color,Point(distance.x+320,distance.y+240),5,Scalar(0,0,255),5,16);
         //     pid_x.PIDInputSet(-distance.x);
         //     pid_y.PIDInputSet(distance.y);

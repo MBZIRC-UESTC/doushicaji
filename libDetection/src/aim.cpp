@@ -22,7 +22,7 @@ bool Aim_ball::isdetect(Mat src,Point3f distance_former){
     Rect rect(distance_former.x,distance_former.y,10,10);
     src(rect).copyTo(roi_image);
      
-    //cvtColor(roi_image,roi_image,CV_BGR2GRAY);
+    cvtColor(roi_image,roi_image,CV_BGR2GRAY);
     // namedWindow("roi_image",CV_WINDOW_AUTOSIZE);
     // imshow("roi_image",roi_image);
     // waitKey(1000);

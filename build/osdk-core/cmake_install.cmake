@@ -32,12 +32,7 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/usr/local/lib/cmake/djiosdk/DJIOSDKConfig.cmake;/usr/local/lib/cmake/djiosdk/DJIOSDKConfigVersion.cmake")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -52,7 +47,7 @@ file(INSTALL DESTINATION "/usr/local/lib/cmake/djiosdk" TYPE FILE FILES
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xshlibx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "shlib")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/usr/local/lib/libdjiosdk-core.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -64,9 +59,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xshlibx" OR NOT CMAKE_INSTALL_COMPON
 file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/vayneli/doushicaji/build/osdk-core/libdjiosdk-core.a")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/include/djiosdk/dji_ack.hpp;/usr/local/include/djiosdk/dji_broadcast.hpp;/usr/local/include/djiosdk/dji_camera.hpp;/usr/local/include/djiosdk/dji_command.hpp;/usr/local/include/djiosdk/dji_control.hpp;/usr/local/include/djiosdk/dji_error.hpp;/usr/local/include/djiosdk/dji_gimbal.hpp;/usr/local/include/djiosdk/dji_hardware_sync.hpp;/usr/local/include/djiosdk/dji_hotpoint.hpp;/usr/local/include/djiosdk/dji_mfio.hpp;/usr/local/include/djiosdk/dji_mission_base.hpp;/usr/local/include/djiosdk/dji_mission_manager.hpp;/usr/local/include/djiosdk/dji_mission_type.hpp;/usr/local/include/djiosdk/dji_mobile_communication.hpp;/usr/local/include/djiosdk/dji_status.hpp;/usr/local/include/djiosdk/dji_subscription.hpp;/usr/local/include/djiosdk/dji_telemetry.hpp;/usr/local/include/djiosdk/dji_type.hpp;/usr/local/include/djiosdk/dji_vehicle.hpp;/usr/local/include/djiosdk/dji_vehicle_callback.hpp;/usr/local/include/djiosdk/dji_version.hpp;/usr/local/include/djiosdk/dji_virtual_rc.hpp;/usr/local/include/djiosdk/dji_waypoint.hpp;/usr/local/include/djiosdk/dji_hard_driver.hpp;/usr/local/include/djiosdk/dji_log.hpp;/usr/local/include/djiosdk/dji_memory.hpp;/usr/local/include/djiosdk/dji_platform_manager.hpp;/usr/local/include/djiosdk/dji_thread_manager.hpp;/usr/local/include/djiosdk/linux_serial_device.hpp;/usr/local/include/djiosdk/posix_thread.hpp;/usr/local/include/djiosdk/posix_thread_manager.hpp;/usr/local/include/djiosdk/dji_aes.hpp;/usr/local/include/djiosdk/dji_crc.hpp;/usr/local/include/djiosdk/dji_open_protocol.hpp;/usr/local/include/djiosdk/dji_protocol_base.hpp;/usr/local/include/djiosdk/dji_circular_buffer.hpp;/usr/local/include/djiosdk/dji_singleton.hpp")
+   "/usr/local/include/djiosdk/dji_ack.hpp;/usr/local/include/djiosdk/dji_control.hpp;/usr/local/include/djiosdk/dji_waypoint.hpp;/usr/local/include/djiosdk/dji_subscription.hpp;/usr/local/include/djiosdk/dji_broadcast.hpp;/usr/local/include/djiosdk/dji_error.hpp;/usr/local/include/djiosdk/dji_camera.hpp;/usr/local/include/djiosdk/dji_vehicle.hpp;/usr/local/include/djiosdk/dji_mission_type.hpp;/usr/local/include/djiosdk/dji_virtual_rc.hpp;/usr/local/include/djiosdk/dji_mission_base.hpp;/usr/local/include/djiosdk/dji_telemetry.hpp;/usr/local/include/djiosdk/dji_mission_manager.hpp;/usr/local/include/djiosdk/dji_vehicle_callback.hpp;/usr/local/include/djiosdk/dji_mobile_communication.hpp;/usr/local/include/djiosdk/dji_gimbal.hpp;/usr/local/include/djiosdk/dji_hotpoint.hpp;/usr/local/include/djiosdk/dji_hardware_sync.hpp;/usr/local/include/djiosdk/dji_version.hpp;/usr/local/include/djiosdk/dji_mfio.hpp;/usr/local/include/djiosdk/dji_status.hpp;/usr/local/include/djiosdk/dji_type.hpp;/usr/local/include/djiosdk/dji_command.hpp;/usr/local/include/djiosdk/dji_aes.hpp;/usr/local/include/djiosdk/dji_open_protocol.hpp;/usr/local/include/djiosdk/dji_protocol_base.hpp;/usr/local/include/djiosdk/dji_crc.hpp;/usr/local/include/djiosdk/dji_log.hpp;/usr/local/include/djiosdk/dji_hard_driver.hpp;/usr/local/include/djiosdk/dji_thread_manager.hpp;/usr/local/include/djiosdk/dji_platform_manager.hpp;/usr/local/include/djiosdk/dji_memory.hpp;/usr/local/include/djiosdk/dji_circular_buffer.hpp;/usr/local/include/djiosdk/dji_singleton.hpp;/usr/local/include/djiosdk/posix_thread_manager.hpp;/usr/local/include/djiosdk/posix_thread.hpp;/usr/local/include/djiosdk/linux_serial_device.hpp")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
@@ -75,46 +70,46 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevx" OR NOT CMAKE_INSTALL_COMPONEN
   endif()
 file(INSTALL DESTINATION "/usr/local/include/djiosdk" TYPE FILE FILES
     "/home/vayneli/doushicaji/osdk-core/api/inc/dji_ack.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_broadcast.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_camera.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_command.hpp"
     "/home/vayneli/doushicaji/osdk-core/api/inc/dji_control.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_error.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_gimbal.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_hardware_sync.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_hotpoint.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_mfio.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_mission_base.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_mission_manager.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_mission_type.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_mobile_communication.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_status.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_subscription.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_telemetry.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_type.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_vehicle.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_vehicle_callback.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_version.hpp"
-    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_virtual_rc.hpp"
     "/home/vayneli/doushicaji/osdk-core/api/inc/dji_waypoint.hpp"
-    "/home/vayneli/doushicaji/osdk-core/hal/inc/dji_hard_driver.hpp"
-    "/home/vayneli/doushicaji/osdk-core/hal/inc/dji_log.hpp"
-    "/home/vayneli/doushicaji/osdk-core/hal/inc/dji_memory.hpp"
-    "/home/vayneli/doushicaji/osdk-core/hal/inc/dji_platform_manager.hpp"
-    "/home/vayneli/doushicaji/osdk-core/hal/inc/dji_thread_manager.hpp"
-    "/home/vayneli/doushicaji/osdk-core/platform/linux/inc/linux_serial_device.hpp"
-    "/home/vayneli/doushicaji/osdk-core/platform/linux/inc/posix_thread.hpp"
-    "/home/vayneli/doushicaji/osdk-core/platform/linux/inc/posix_thread_manager.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_subscription.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_broadcast.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_error.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_camera.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_vehicle.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_mission_type.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_virtual_rc.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_mission_base.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_telemetry.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_mission_manager.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_vehicle_callback.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_mobile_communication.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_gimbal.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_hotpoint.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_hardware_sync.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_version.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_mfio.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_status.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_type.hpp"
+    "/home/vayneli/doushicaji/osdk-core/api/inc/dji_command.hpp"
     "/home/vayneli/doushicaji/osdk-core/protocol/inc/dji_aes.hpp"
-    "/home/vayneli/doushicaji/osdk-core/protocol/inc/dji_crc.hpp"
     "/home/vayneli/doushicaji/osdk-core/protocol/inc/dji_open_protocol.hpp"
     "/home/vayneli/doushicaji/osdk-core/protocol/inc/dji_protocol_base.hpp"
+    "/home/vayneli/doushicaji/osdk-core/protocol/inc/dji_crc.hpp"
+    "/home/vayneli/doushicaji/osdk-core/hal/inc/dji_log.hpp"
+    "/home/vayneli/doushicaji/osdk-core/hal/inc/dji_hard_driver.hpp"
+    "/home/vayneli/doushicaji/osdk-core/hal/inc/dji_thread_manager.hpp"
+    "/home/vayneli/doushicaji/osdk-core/hal/inc/dji_platform_manager.hpp"
+    "/home/vayneli/doushicaji/osdk-core/hal/inc/dji_memory.hpp"
     "/home/vayneli/doushicaji/osdk-core/utility/inc/dji_circular_buffer.hpp"
     "/home/vayneli/doushicaji/osdk-core/utility/inc/dji_singleton.hpp"
+    "/home/vayneli/doushicaji/osdk-core/platform/linux/inc/posix_thread_manager.hpp"
+    "/home/vayneli/doushicaji/osdk-core/platform/linux/inc/posix_thread.hpp"
+    "/home/vayneli/doushicaji/osdk-core/platform/linux/inc/linux_serial_device.hpp"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
   if(EXISTS "$ENV{DESTDIR}/usr/local/lib/cmake/djiosdk/djiosdkTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}/usr/local/lib/cmake/djiosdk/djiosdkTargets.cmake"

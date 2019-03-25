@@ -10,6 +10,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/local/opencv-3.1.0/include/opencv"
+  "/usr/local/opencv-3.1.0/include"
   "../include"
   "../libBase/include"
   "../libHardWare/serialPort/include"
@@ -26,8 +28,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../unittest/serial_test/libBase/include"
   "../unittest/serial_test/libHardWare/serialPort/include"
   "../unittest/serial_test/common"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
   )
 
 # Targets to which this target links.
