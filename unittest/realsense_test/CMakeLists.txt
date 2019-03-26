@@ -14,6 +14,7 @@ target_link_libraries(${PROJECT_NAME} Base pthread UsbCapture)
 target_link_libraries(${PROJECT_NAME} Detection)
 target_link_libraries(${PROJECT_NAME} Pid)
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} librealsense2.so)
+target_link_libraries(${PROJECT_NAME} libncurses.so.5)
 
 #AUX_SOURCE_DIRECTORY(./src Pid_SRCS)
 #ADD_LIBRARY(Pid ${Pid_SRCS})

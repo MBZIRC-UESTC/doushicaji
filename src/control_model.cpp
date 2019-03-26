@@ -87,11 +87,13 @@ void ControlModel::trackBall(){
     Mat ori;
     cap->getColorImg(ori);
     Point3f distance;
-    String str1,str2;
+    String str1,str2; 
     float velocity_y,velocity_x,velocity_z;
     //VideoWriter writer;
     //writer.open("log.avi",CV_FOURCC('M','J','P','G'),25,Size(640,480),0);
     distance.x = distance .y = distance.z = 0xff;
+    time_t c=time(NULL);
+    while(std::difftime(time(NULL),c)<60){
     if(cap->getDepthImg(src) == 0){
         distance = ball_aim.getDistance(src);
       if(ball_aim.isdetect(ori,distance)==1){
@@ -118,11 +120,20 @@ void ControlModel::trackBall(){
         putText(ori,str2,Point(10,60),CV_FONT_HERSHEY_SIMPLEX,1,Scalar(0,255,0),4,8);
         
         writer_color.write(ori);
-        //writer_depth.write(src);
+        writer_color.release();
 	    src.convertTo(src,CV_8UC1);
         writer_depth.write(src);
+        writer_depth.release();
+        //if (char(waitKey(1)) == 'q') break;
+
              interface->movebyVelocity(-velocity_x,velocity_y,0,0);
         // else interface->movebyVelocity(velocity_x,velocity_y,0,0);
         // if(distance.z<800)  cout<<"收网!!!!"<<endl;
-}   
+    }
+        else cout<<"error"<<endl;
+        if (char(waitKey(1)) == 'q') break;
+    }   
+        cout<<"one minutes"<<endl;
+        writer_color.release();
+        writer_depth.release();
 } 

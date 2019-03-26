@@ -1,7 +1,9 @@
-#include "opencv2/opencv.hpp"
+#include <opencv2/opencv.hpp>
 #include "realsense.h"
 #include "pid.h"
 #include "aim.h"
+//#include <curses.h>
+#include <time.h>        
 
 int main(){
     RealsenseInterface realsense;
@@ -21,6 +23,7 @@ int main(){
     PIDControl pid_z;
     Point3f distance;
     String str_1,str_2;
+    bool g_run = true;
     float velocity_y,velocity_x,velocity_z;
     pid_x.init(0.001,0,0,0.0f,-5,5,AUTOMATIC,DIRECT);
     pid_y.init(0.001,0,0,0.0f,-5,5,AUTOMATIC,DIRECT);
@@ -28,7 +31,12 @@ int main(){
     pid_x.PIDSetpointSet(0);
     pid_y.PIDSetpointSet(0);
     pid_z.PIDSetpointSet(500);
-    while(true){
+    time_t c=time(NULL);
+    while(std::difftime(time(NULL),c)<60)
+    //time_t start,end;
+    //time(&start);
+    //while(g_run)
+    {
         if(realsense.getDepthImg(depth) == 0){
             realsense.getColorImg(color);
             // cv::Point3f distance = ball_aim.getDistance(depth);
@@ -88,5 +96,18 @@ int main(){
            // waitKey(5);
         }
         else cout<<"error"<<endl;
+        //if (char(waitKey(1)) == 'q') break;waitKey只能再屏幕上操作
+        //按q退出
+        //initscr();
+        //endwin();
+        // if(int a==getch())  //_getch下划线代表是编译器拓展函数
+        // {
+        //     g_run = false;
+        //     cout<<"one minutes, press q to continue "<<endl;
+        // }
     }
+        cout<<"one minutes"<<endl;
+        writer_color.release();
+        writer_depth.release();
+        return 0;
 }
