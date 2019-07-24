@@ -10,7 +10,7 @@ int main(){
     Aim_ball ball_aim;
     if(realsense.init(640,480) == 0){
         cout << "RealsenseCapture init successed!" <<endl;
-        usleep(1000000);
+        usleep(5000000);
     }
     Mat depth;
     Mat color;

@@ -14,6 +14,9 @@
 #include <robot_model.h>
 #include <basic_tool.h>
 
+#include <Eigen/Core>
+#include <Eigen/Geometry>
+
 using namespace cv;
 using namespace std;
 
@@ -111,4 +114,20 @@ Point3f RobotModel::getCurrentAngle(){
     tmp.y = tmp_.y;
     tmp.z = tmp_.z;
     pthread_mutex_unlock(&dataMutex);
+
+    return tmp;
 }
+
+Eigen::Matrix3f RobotModel::getRotation_matrix(Point3f CurrentAngle){
+
+    Eigen::Vector3f Rotation_vector(CurrentAngle.z,CurrentAngle.y,CurrentAngle.x);
+    Eigen::AngleAxisf rotation_vector;
+    rotation_vector=Eigen::AngleAxisf(Rotation_vector[0],Eigen::Vector3f::UnitZ())*
+                    Eigen::AngleAxisf(Rotation_vector[1],Eigen::Vector3f::UnitY())*
+                    Eigen::AngleAxisf(Rotation_vector[2],Eigen::Vector3f::UnitX());
+
+    Eigen::Matrix3f rotation_matrix=rotation_vector.matrix();
+
+    return rotation_matrix;
+}
+

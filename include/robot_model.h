@@ -12,6 +12,7 @@
 // Helpers
 #include <dji_linux_helpers.hpp>
 #include "realsense.h"
+#include <Eigen/Core>
 using namespace DJI::OSDK;
 using namespace DJI::OSDK::Telemetry;
 
@@ -59,6 +60,7 @@ public://机器人具体数据读写函数接口
     /**************用户接口****************/
     Point3f getCurrentVelocity();
     Point3f getCurrentAngle();
+    Eigen::Matrix3f getRotation_matrix(Point3f CurrentAngle);
     unsigned char getRobotId();
     RobotMode getCurrentMode();
     void setCurrentMode(RobotMode robotMode);

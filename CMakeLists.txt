@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 
 project(UAV)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -O0")
-SET(OpenCV_DIR /usr/local/opencv-3.1.0/share/OpenCV)
+#SET(OpenCV_DIR /usr/local/opencv-3.1.0/share/OpenCV)
 set(CMAKE_CXX_STANDARD 11)
 set(ONBOARDSDK_SOURCE "${PROJECT_SOURCE_DIR}/osdk-core")
 

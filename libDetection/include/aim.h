@@ -13,6 +13,7 @@ class Aim_ball{
     public:  
         bool isdetect(Mat src,Point3f distance_former);
         Point3f getDistance(Mat depth);
+        bool filter(Mat depth,int m,int n);
     private:
         Mat src;
         Mat roi_image;

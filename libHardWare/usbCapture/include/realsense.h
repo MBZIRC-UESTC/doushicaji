@@ -44,21 +44,31 @@ class RealsenseInterface:public BaseThread{
          */
         int getDepthImg(Mat &img);
 
+        float get_depth_scale(rs2::device dev);
+
+        bool profile_changed(const std::vector<rs2::stream_profile>& current, const std::vector<rs2::stream_profile>& prev);
+
     private:
         rs2::spatial_filter spat;
         rs2::frameset data;
+        rs2::frameset frameset;
         rs2::disparity_transform depth2disparity;
         rs2::decimation_filter dec;
-        rs2::pipeline pipe;
-        rs2::pipeline pipe_color;
+       // rs2::pipeline pipe;
+       // rs2::pipeline pipe_color;
+       // rs2::pipeline profile;
+        float depth_scale;
+        rs2_stream align_to=RS2_STREAM_COLOR;
         bool isOpen;
-        bool isColorImgUpdate;
-        bool isDepthImgUpdate;
+        
         pthread_mutex_t imgMutex = PTHREAD_MUTEX_INITIALIZER;//互斥锁
         int color_img_width;
         int depth_img_width;
         int color_img_height;
         int depth_img_height;
+        public:
+        bool isColorImgUpdate;
+        bool isDepthImgUpdate;
         Mat color_img;
         Mat depth_img;
 
